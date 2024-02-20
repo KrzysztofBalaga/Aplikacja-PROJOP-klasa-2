@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+	<meta charset="UTF-8">
+	<title>Funkcja kwadratowa</title>
+	<meta name="description" content="Wszystko co musisz wiedzieć o javie.">
+	<meta name="keywods" content="historia javy, java, autor javy, programy java">
+	<meta name="author" content="Krzysztof Bałaga">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="../style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" type="image" href="../img/matma.png" />
+	<link rel="stylesheet" href="../css/fontello.css">
+	<style>
+		#title
+		{
+			text-shadow: 0px 0px 15px #0bf;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<div id="header">
+			<a href="../gowna.html"><img src="../img/matma.png" height="40px" /><a /> Matma na 99%
+		</div>
+		<div id="nav">
+			<div id="menu">Czego potrzebujesz?</div><div id="line"></div>
+			<a href="fKwadratowa.html" class="linki"><div class="options">Funkcja kwadratowa</div></a>
+			<a href="dKatow.html" class="linki"><div class="options">Dwusieczne kątów</div></a>
+			<a href="tTalesa.html" class="linki"><div class="options">Twierdzenie Talesa</div></a>
+			<a href="tPodIPrzyst.html" class="linki"><div class="options">Trójkąty pod. i przyst.</div></a>
+			<a href="proste.html" class="linki"><div class="options">Proste</div></a>
+			<a href="wielomiany.html" class="linki"><div class="options">Wielomiany</div></a>
+			<a href="planimetria.html" class="linki"><div class="options">Planimetria</div></a>
+			<div class="clear"></div>
+		</div>
+		<div id="header">
+			<div id="author">Krzysztof Bałaga</div>
+			<div id="title">Nauka Javy</div>
+			<div class="clear"></div>
+		</div>
+		<div id="Tcontainer">
+			<h1 class="Th1">Podstawowe Komendy Javy</h1></br>
+			<h2 class="Th2">Oto prosty kod w języku java:</h2></br>
+			<textarea cols="100" rows="6" class="textarea">public class Main {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}
+				</textarea></br>
+			<span class="text">
+				Metoda "main" jest publiczna, statyczna i zwraca wartość typu void (czyli nie zwraca żadnej wartości). Przyjmuje ona argument typu String[], który reprezentuje listę argumentów przekazywanych do programu podczas jego uruchamiania.</br></br>
+				Wewnątrz metody "main" znajduje się tylko jedna instrukcja, która wyświetla tekst "Hello World" na standardowym wyjściu przy użyciu metody "println" klasy "System". Metoda "println" wyświetla tekst wraz z przejściem do nowej linii.</br></br>
+				Podsumowując, kod ten jest przykładem najprostszego programu napisanego w języku Java, który wyświetla jedynie napis "Hello World" na ekranie.
+			</span></br></br></br>
+			<h1 class="Th1">Rodzaje Zmiennych</h1></br></br>
+			<h2 class="Th2">Oto najprostrze rodzaje zmiennych:</h2>
+			<textarea cols="100" rows="6" class="textarea">int a = 1;
+double b = 1.5;
+char c = 'a';
+boolean v = true;
+String w = "abc123";
+				</textarea></br>
+			<span class="text">
+				1. Zmienna "a" jest typu całkowitoliczbowego (int) i została zainicjowana wartością 1.
+				Typ int reprezentuje liczby całkowite (bez ułamków) o zakresie od -2^31 do 2^31-1.</br></br>
+				2. Zmienna "b" jest typu zmiennoprzecinkowego (double) i została zainicjowana wartością 1.5 (warto zaznaczyć, że liczby zmiennoprzecinowe posiadają kropke a nie przecinek).
+				Typ double reprezentuje liczby zmiennoprzecinkowe (z ułamkami) o podwójnej precyzji.</br></br>
+				3. Zmienna "c" jest typu znakowego (char) i została zainicjowana wartością 'a'.
+				Typ char reprezentuje pojedynczy znak Unicode. W Javie znak musi być umieszczony w apostrofach ('a'), a nie w cudzysłowiach("a").</br></br>
+				4.Zmienna "v" jest typu logicznego (boolean) i została zainicjowana wartością true.
+				Typ boolean reprezentuje wartość logiczną true (prawda) lub false (fałsz).</br></br>
+				5.Zmienna "w" jest typu łańcuchowego (String) i została zainicjowana wartością "abc123".
+				Typ String reprezentuje ciąg znaków i jest używany do przechowywania tekstu lub łańcuchów znaków.
+			</span></br></br></br>
+			<h1 class="Th1">Operacje na Zmiennych</h1></br></br>
+			<h2 class="Th2">Oto podstawowe operatory zmiennych:</h2>
+			<textarea cols="100" rows="15" class="textarea">//Najpierw zadeklarujmy sobie jakieś zmienne
+int a = 4;
+int b = 8;
+double x = 1.5;
+double y = 4.3;
+char c = 'a';
+char d = 'm';
+String v1 = "Jest";
+String v2 = "mily";
+
+//Dodawanie i odejmowanie "+", "-"-----------------------------------------------------------------
+	//zmienne typu int
+	System.out.println("a + b = " + (a+b));
+	System.out.println("a - b = " + (a-b));
+	
+	//zmienne typu double
+	System.out.println("x + y = " + (x+y));
+	System.out.println("x - y = " + (x-y));
+	
+	//zmienne typu char
+	System.out.println("c + d = " + (c+d));
+	
+	//zmienne typu String
+	System.out.println("Natan " + (v1+" "+v2));
+	System.out.println("Natan " + (v2+" "+v1));
+	
+//Mnożenie i dzielenie "*", "/"-----------------------------------------------------------------
+	//zmienne typu int
+	System.out.println("a * b = " + (a*b));
+	System.out.println("a / b = " + (a/b));
+	
+	//zmienne typu double
+	System.out.println("x * y = " + (x*y));
+	System.out.println("x / y = " + (x/y));
+				</textarea></br>
+			<span class="text">
+				W pierwszej linijce obliczeń widać "System.out.println("a + b = " + (a+b));", zapis ten oznacza, że zostanie wydrukowany tekst "a + b = " oraz wynik dodawania a+b, czyli "a + b = 12" (tak samo z pozostałymi przykładami).<br /><br />
+				1. Dodawanie (+) i odejmowanie (-) dla zmiennych typu int, double, char i String. Wyniki będą wyświetlane jako ciągi znaków z wynikiem obliczeń.<br /><br />
+				<span class="margin">
+					-Wynik dodawania "a + b" to 12.<br />
+					-Wynik odejmowania "a - b" to -4.<br />
+					-Wynik dodawania "x + y" to 5.8.<br />
+					-Wynik odejmowania "x - y" to -2.8.<br />
+					-Wynik dodawania "c + d" to 206 (sumowanie wartości numerycznych dla kodów Unicode znaków 'a' i 'm').<br />
+					-Wynik dodawania "Natan Jest mily" (łączenie ciągów znaków "Natan", "Jest", "*spacja*" i "mily").<br />
+					-Wynik dodawania "Natan mily Jest" (łączenie ciągów znaków "Natan", "mily", "*spacja*" i "Jest").
+				</span><br /><br />
+				2. Mnożenie (*) i dzielenie (/) dla zmiennych typu int i double. Wyniki będą wyświetlane jako ciągi znaków z wynikiem obliczeń.<br /><br />
+				<span class="margin">
+					-Wynik mnożenia "a * b" to 32.<br />
+					-Wynik dzielenia "a / b" to 0, ponieważ oba operandy są typu int, a wynik dzielenia również jest typu int, co oznacza, że liczba zostanie zaokrąglona w dół do liczby całkowitej.<br />
+					-Wynik mnożenia "x * y" to 6.45.<br />
+				</span><br />
+				<span style="font-size:21px;">Jeśli chciałbyś sie doweidzieć więcej, polecam kurs na youtobe, z którego sam się uczyłem <a href="https://www.youtube.com/watch?v=OXu1wlo0OZk&list=PLcr3jxpNXo4Gh_WCkEK992cxERXaQp-57" target="_blank" style="color:#0bf;">Kurs</a>.</span>
+		</div>
+	</body>
+</html>
